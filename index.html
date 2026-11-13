@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@alvaroiris_uwu | Enlaces</title>
+  <meta name="description" content="Perfil personal y lista de enlaces estilo Linktree con diseno neobrutalista minimalista.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Contenedor principal de la aplicacion (maximo 480px centrado) -->
+  <main class="page-container">
+
+    <!-- Barra superior con boton para compartir -->
+    <header class="top-bar">
+      <button id="btn-share" class="share-btn" type="button" aria-label="Compartir perfil" title="Compartir">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+    </header>
+
+    <!-- Cabecera de perfil centrada -->
+    <section class="profile-section">
+      <div class="avatar-wrapper">
+        <img 
+          src="fotoperfil.avif" 
+          alt="Foto de perfil de @alvaroiris_uwu" 
+          class="avatar-img"
+          onerror="this.src='avatar.svg'"
+          loading="lazy"
+        >
+      </div>
+
+      <h1 class="username">@alvaroiris_uwu</h1>
+      <p class="bio">Desarrollador & Creador. Descubrí mis proyectos y enlaces acá.</p>
+    </section>
+
+    <!-- Lista vertical de botones neobrutalistas -->
+    <nav class="links-nav" aria-label="Enlaces de perfil">
+      <ul class="links-list">
+
+        <!-- Boton 1: Sitio Web -->
+        <li class="link-item">
+          <a href="https://tusitio.com" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+            <span class="btn-icon left-icon">
+              <i class="fa-solid fa-globe"></i>
+            </span>
+            <span class="btn-text">Sitio Web</span>
+            <span class="btn-icon right-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+        </li>
+
+        <!-- Boton 2: Portafolio -->
+        <li class="link-item">
+          <a href="https://tuportafolio.com" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+            <span class="btn-icon left-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </span>
+            <span class="btn-text">Portafolio</span>
+            <span class="btn-icon right-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+        </li>
+
+        <!-- Boton 3: GitHub -->
+        <li class="link-item">
+          <a href="https://github.com/alvaroiris_uwu" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+            <span class="btn-icon left-icon">
+              <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="btn-text">GitHub</span>
+            <span class="btn-icon right-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+        </li>
+
+        <!-- Boton 4: Instagram -->
+        <li class="link-item">
+          <a href="https://instagram.com/alvaroiris_uwu" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+            <span class="btn-icon left-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+            <span class="btn-text">Instagram</span>
+            <span class="btn-icon right-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+        </li>
+
+        <!-- Boton 5: Enlace Desplegable (Proyectos Destacados) -->
+        <li class="link-item has-dropdown">
+          <button type="button" class="neobrutal-btn dropdown-toggle" aria-expanded="false">
+            <span class="btn-icon left-icon">
+              <i class="fa-solid fa-folder-open"></i>
+            </span>
+            <span class="btn-text">Proyectos Destacados</span>
+            <span class="btn-icon right-icon" aria-hidden="true">
+              <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </span>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://github.com/alvaroiris_uwu/proyecto-web" target="_blank" rel="noopener noreferrer" class="dropdown-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-code"></i></span>
+              <span class="sublink-text">Aplicacion Web SaaS</span>
+              <span class="sublink-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="https://github.com/alvaroiris_uwu/proyecto-movil" target="_blank" rel="noopener noreferrer" class="dropdown-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+              <span class="sublink-text">App Movil React Native</span>
+              <span class="sublink-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Pie de pagina -->
+    <footer class="page-footer">
+      <p class="footer-text">
+        <i class="fa-solid fa-bolt" aria-hidden="true"></i> Conectado con femboys
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Aviso de confirmacion (Toast) -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite">
+    <i class="fa-solid fa-check toast-icon"></i>
+    <span class="toast-message">Enlace copiado</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
