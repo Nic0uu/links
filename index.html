@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@nico | Enlaces</title>
-  <meta name="description" content="Perfil personal y lista de enlaces estilo Linktree con diseno neobrutalista minimalista.">
+  <meta name="description" content="Tarjeta de presentación digital y lista de enlaces profesionales de @nico.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,92 +12,122 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main class="page-container">
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" aria-label="Alternar modo oscuro">
 
+  <div class="container">
     <header class="top-bar">
-      <button id="btn-share" class="share-btn" type="button" aria-label="Compartir perfil" title="Compartir">
-        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      <label for="theme-toggle" class="icon-btn theme-btn" title="Cambiar tema">
+        <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+      </label>
+      <button id="btn-share" class="icon-btn share-btn" type="button" aria-label="Compartir perfil" title="Compartir">
+        <i class="fa-solid fa-arrow-up-from-bracket" aria-hidden="true"></i>
       </button>
     </header>
 
-    <section class="profile-section">
-      <div class="avatar-wrapper">
-        <img 
-          src="fotoperfil.png" 
-          alt="Foto de perfil de @nico" 
-          class="avatar-img"
-          onerror="this.src='avatar.svg'"
-          loading="lazy"
-        >
-      </div>
+    <main class="main-content">
+      <section class="profile-section">
+        <figure class="avatar-wrapper">
+          <img
+            src="assets/fotoperfil.png"
+            alt="Foto de perfil de @nico"
+            class="avatar-img"
+            loading="lazy"
+          >
+        </figure>
 
-      <h1 class="username">@nico</h1>
-      <p class="bio">Desarrollador & Creador. Descubrí mis proyectos y enlaces acá.</p>
-    </section>
+        <h1 class="username">@nico</h1>
+        <p class="tech-title">Técnico en Programación</p>
+        <p class="bio">Desarrollador &amp; Creador. Descubrí mis proyectos y enlaces acá.</p>
+      </section>
 
-    <nav class="links-nav" aria-label="Enlaces de perfil">
-      <ul class="links-list">
-
-        <li class="link-item">
-          <a href="https://npx-delta.vercel.app" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
-            <span class="btn-icon left-icon">
-              <i class="fa-solid fa-globe"></i>
-            </span>
-            <span class="btn-text">Sitio Web</span>
-            <span class="btn-icon right-icon" aria-hidden="true">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </span>
-          </a>
-        </li>
-
-        <li class="link-item">
-          <a href="https://tuportafolio.com" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
-            <span class="btn-icon left-icon">
-              <i class="fa-solid fa-briefcase"></i>
-            </span>
-            <span class="btn-text">Portafolio</span>
-            <span class="btn-icon right-icon" aria-hidden="true">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </span>
-          </a>
-        </li>
-
-        <li class="link-item">
-          <a href="https://github.com/Nic0uu/" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
-            <span class="btn-icon left-icon">
-              <i class="fa-brands fa-github"></i>
-            </span>
-            <span class="btn-text">GitHub</span>
-            <span class="btn-icon right-icon" aria-hidden="true">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </span>
-          </a>
-        </li>
-
-        <li class="link-item has-dropdown">
-          <button type="button" class="neobrutal-btn dropdown-toggle" aria-expanded="false">
-            <span class="btn-icon left-icon">
-              <i class="fa-solid fa-folder-open"></i>
-            </span>
-            <span class="btn-text">Proyectos Destacados</span>
-            <span class="btn-icon right-icon" aria-hidden="true">
-              <i class="fa-solid fa-chevron-down chevron-icon"></i>
-            </span>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://comedor.eest1.edu.ar" target="_blank" rel="noopener noreferrer" class="dropdown-sublink">
-              <span class="sublink-icon"><i class="fa-solid fa-utensils"></i></span>
-              <span class="sublink-text">Sistema comedor escolar</span>
-              <span class="sublink-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      <nav class="links-nav" aria-label="Enlaces profesionales">
+        <ul class="links-list">
+          <li class="link-item">
+            <a href="https://npx-delta.vercel.app" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+              <span class="btn-icon left-icon">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              </span>
+              <span class="btn-text">Sitio Web</span>
+              <span class="btn-icon right-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
             </a>
-          </div>
-        </li>
+          </li>
 
-      </ul>
-    </nav>
+          <li class="link-item">
+            <a href="https://tuportafolio.com" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+              <span class="btn-icon left-icon">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              </span>
+              <span class="btn-text">Portafolio</span>
+              <span class="btn-icon right-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+          </li>
+
+          <li class="link-item">
+            <a href="https://github.com/Nic0uu/" target="_blank" rel="noopener noreferrer" class="neobrutal-btn">
+              <span class="btn-icon left-icon">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </span>
+              <span class="btn-text">GitHub</span>
+              <span class="btn-icon right-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+          </li>
+
+          <li class="link-item">
+            <a href="mailto:nicolasemanuelbenetti@gmail.com" class="neobrutal-btn">
+              <span class="btn-icon left-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </span>
+              <span class="btn-text">Email</span>
+              <span class="btn-icon right-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+          </li>
+
+          <li class="link-item has-dropdown">
+            <button type="button" class="neobrutal-btn dropdown-toggle" aria-expanded="false">
+              <span class="btn-icon left-icon">
+                <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+              </span>
+              <span class="btn-text">Proyectos Destacados</span>
+              <span class="btn-icon right-icon" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </span>
+            </button>
+            <ul class="dropdown-content">
+              <li>
+                <a href="https://comedor.eest1.edu.ar" target="_blank" rel="noopener noreferrer" class="dropdown-sublink">
+                  <span class="sublink-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span>
+                  <span class="sublink-text">Sistema comedor escolar</span>
+                  <span class="sublink-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="tech-section" aria-labelledby="tech-heading">
+        <h2 id="tech-heading" class="section-heading">Tecnologías</h2>
+        <ul class="badges-list">
+          <li class="tech-badge"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML</li>
+          <li class="tech-badge"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS</li>
+          <li class="tech-badge"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+          <li class="tech-badge"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</li>
+          <li class="tech-badge"><i class="fa-solid fa-database" aria-hidden="true"></i> SQL</li>
+        </ul>
+      </section>
+    </main>
 
     <footer class="page-footer">
       <p class="footer-text">
@@ -105,13 +135,12 @@
       </p>
     </footer>
 
-  </main>
-
-  <div id="toast" class="toast-notification" role="status" aria-live="polite">
-    <i class="fa-solid fa-check toast-icon"></i>
-    <span class="toast-message">Enlace copiado</span>
+    <aside id="toast" class="toast-notification" role="status" aria-live="polite">
+      <i class="fa-solid fa-check toast-icon" aria-hidden="true"></i>
+      <span class="toast-message">Enlace copiado</span>
+    </aside>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
