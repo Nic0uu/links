@@ -1,29 +1,21 @@
-/* ==========================================================================
-   CONFIGURACION Y VARIABLES NEOBRUTALISTAS
-   ========================================================================== */
 :root {
-  /* Paleta de colores solicitada */
-  --bg-page: #E2FCE6;          /* Fondo principal: Verde menta muy claro y suave */
-  --bg-button: #C2F8CB;        /* Fondo de botones: Verde menta pastel */
-  --bg-button-hover: #B0F4BB;  /* Tonalidad hover */
-  --color-black: #000000;      /* Negro puro */
-  --color-bio: #111111;        /* Color texto biografia */
+  --bg-page: #E2FCE6;
+  --bg-button: #C2F8CB;
+  --bg-button-hover: #B0F4BB;
+  --color-black: #000000;
+  --color-bio: #111111;
 
-  /* Tipografia */
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* Bordes y sombras neobrutalistas */
   --border-width: 2px;
   --border-solid: var(--border-width) solid var(--color-black);
   --shadow-default: 4px 5px 0px var(--color-black);
   --shadow-hover: 2px 3px 0px var(--color-black);
   --shadow-active: 0px 0px 0px var(--color-black);
 
-  /* Transicion rapida y mecanica */
   --transition-fast: 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Reset inicial */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -50,9 +42,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ==========================================================================
-   CONTENEDOR PRINCIPAL (MAX-WIDTH 480PX CENTRADO)
-   ========================================================================== */
 .page-container {
   width: 100%;
   max-width: 480px;
@@ -62,9 +51,6 @@ body {
   position: relative;
 }
 
-/* ==========================================================================
-   BOTON FLOTANTE / SUPERIOR DERECHO (COMPARTIR)
-   ========================================================================== */
 .top-bar {
   width: 100%;
   display: flex;
@@ -107,9 +93,6 @@ body {
   outline-offset: 2px;
 }
 
-/* ==========================================================================
-   CABECERA DE PERFIL
-   ========================================================================== */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -152,9 +135,6 @@ body {
   margin: 0 auto;
 }
 
-/* ==========================================================================
-   LISTA Y BOTONES DE ENLACE (ESTILO NEOBRUTALISTA)
-   ========================================================================== */
 .links-nav {
   width: 100%;
 }
@@ -163,7 +143,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Separacion de 16px entre si */
+  gap: 16px;
   width: 100%;
 }
 
@@ -171,7 +151,6 @@ body {
   width: 100%;
 }
 
-/* Estilo base del boton neobrutalista */
 .neobrutal-btn {
   display: grid;
   grid-template-columns: 24px 1fr 24px;
@@ -192,14 +171,12 @@ body {
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
 }
 
-/* Estado :hover */
 .neobrutal-btn:hover {
   transform: translate(2px, 2px);
   box-shadow: var(--shadow-hover);
   background-color: var(--bg-button-hover);
 }
 
-/* Estado :active */
 .neobrutal-btn:active {
   transform: translate(4px, 5px);
   box-shadow: var(--shadow-active);
@@ -210,7 +187,6 @@ body {
   outline-offset: 3px;
 }
 
-/* Iconos y textos dentro del boton */
 .btn-icon {
   display: inline-flex;
   align-items: center;
@@ -240,9 +216,6 @@ body {
   text-overflow: ellipsis;
 }
 
-/* ==========================================================================
-   ENLACE DESPLEGABLE (DROPDOWN)
-   ========================================================================== */
 .chevron-icon {
   transition: transform 0.22s ease;
 }
@@ -312,9 +285,6 @@ body {
   font-size: 11px;
 }
 
-/* ==========================================================================
-   PIE DE PAGINA
-   ========================================================================== */
 .page-footer {
   margin-top: 40px;
   text-align: center;
@@ -334,9 +304,6 @@ body {
   color: var(--color-black);
 }
 
-/* ==========================================================================
-   AVISO TOAST ("ENLACE COPIADO")
-   ========================================================================== */
 .toast-notification {
   position: fixed;
   bottom: 24px;
@@ -373,9 +340,6 @@ body {
   line-height: 1;
 }
 
-/* ==========================================================================
-   RESPONSIVIDAD Y PREFERENCIAS
-   ========================================================================== */
 @media (max-width: 360px) {
   body {
     padding-left: 12px;
