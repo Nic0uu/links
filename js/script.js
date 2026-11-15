@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const shareButton = document.getElementById('btn-share');
+  const portfolioButton = document.getElementById('btn-portfolio');
   const toast = document.getElementById('toast');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   let toastTimer = null;
@@ -12,8 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Muestra la alerta tipo Toast con el mensaje especificado
    */
-  function showToast(message) {
+  function showToast(message, iconClass = 'fa-solid fa-check') {
     if (!toast) return;
+
+    const iconEl = toast.querySelector('.toast-icon');
+    if (iconEl) {
+      iconEl.className = `${iconClass} toast-icon`;
+    }
 
     const messageEl = toast.querySelector('.toast-message');
     if (messageEl && message) {
@@ -76,6 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         showToast('Error al copiar');
       }
+    });
+  }
+
+  /**
+   * Notificacion al hacer clic en Portafolio
+   */
+  if (portfolioButton) {
+    portfolioButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('Portfolio en proceso :)', 'fa-solid fa-clock');
     });
   }
 
